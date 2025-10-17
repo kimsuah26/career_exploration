@@ -1,8 +1,16 @@
-document.addEventListener("DOMContentLoaded", (https://script.google.com/macros/s/AKfycbxb6Ks15PEqo025_vry9uTVUbWsSppD9GEPRfdvieXr_se_qpkJc6jAU1VLCOOqH5gTFQ/exec) => {
-  const form = document.getElementById("career-form");
-  const recordsContainer = document.getElementById("records-container");
-  const chartCanvas = document.getElementById("fit-chart");
+document.addEventListener("DOMContentLoaded", () => {
+     const WEB_APP_URL = '    const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwh1nHv-utUNPuHUA30YXfziK4hV0ILnL63YN8qrgLwS2LvfJhrfAfotwUvhF1fZrO7yw/exec';
 
+    const recordForm = document.getElementById('record-form');
+    const recordsContainer = document.getElementById('records-container');
+    const dateInput = document.getElementById('date');
+    const exportButton = document.getElementById('export-excel');
+    const moodChartCanvas = document.getElementById('mood-chart');
+    const recordForm = document.getElementById('record-form');
+    const recordsContainer = document.getElementById('records-container');
+    const dateInput = document.getElementById('date');
+    const exportButton = document.getElementById('export-excel');
+    const moodChartCanvas = document.getElementById('mood-chart');
   let records = [];
 
   // 📊 차트 초기화
