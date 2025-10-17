@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #2C3E50; /* 전문적인 네이비 */
+  --accent-color: #F4A261; /* 따뜻한 오렌지 */
+  --background-color: #F8F5F2; /* 부드러운 아이보리 */
+  --card-color: #FFFFFF;
+  --border-color: #E0E0E0;
+  --text-color: #333;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #555;
+}
+
+#career-form {
+  background-color: var(--card-color);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  margin-bottom: 40px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--primary-color);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Noto Sans KR', sans-serif;
+  transition: all 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--accent-color);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(244, 162, 97, 0.2);
+}
+
+.mood-selector input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.mood-selector label {
+  display: inline-block;
+  background-color: #fdfdfd;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mood-selector input[type="radio"]:checked + label {
+  background-color: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+  font-weight: 700;
+}
+
+
+button[type="submit"] {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #1a252f;
+}
+
+.stats-section {
+  background-color: var(--card-color);
+  border-radius: 16px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  padding: 25px 30px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.stats-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.records-section {
+  background-color: var(--card-color);
+  border-radius: 16px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  padding: 25px;
+}
+
+.records-section h2 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.record-card {
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px var(--shadow-color);
+  background-color: #fff;
+}
+
+.record-card p {
+  margin: 6px 0;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #777;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+}

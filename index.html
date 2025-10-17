@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>진로 탐색</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>진로 탐색</h1>
+      <p>나의 전공, 적성, 그리고 미래를 함께 탐색해요 🌱</p>
+    </header>
+
+    <main>
+      <form id="career-form">
+        <div class="form-group">
+          <label>대학교를 재학 중인가요?</label>
+          <select name="university" required>
+            <option value="">선택하세요</option>
+            <option value="yes">예</option>
+            <option value="no">아니요</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>전공이 무엇인가요? (또는 관심 전공)</label>
+          <input type="text" name="major" placeholder="예: 시각디자인학과" required />
+        </div>
+
+        <div class="form-group">
+  <label>전공이 적성에 맞나요? (1~5점)</label>
+  <div class="mood-selector">
+    <input type="radio" id="fit1" name="fit" value="1" required>
+    <label for="fit1">1점 😕</label>
+
+    <input type="radio" id="fit2" name="fit" value="2">
+    <label for="fit2">2점</label>
+
+    <input type="radio" id="fit3" name="fit" value="3">
+    <label for="fit3">3점 😐</label>
+
+    <input type="radio" id="fit4" name="fit" value="4">
+    <label for="fit4">4점</label>
+
+    <input type="radio" id="fit5" name="fit" value="5">
+    <label for="fit5">5점 😄</label>
+  </div>
+</div>
+
+
+        <div class="form-group">
+          <label>가장 잘하는 것은 무엇인가요?</label>
+          <textarea name="strength" rows="3" placeholder="아이디어 도출, 커뮤니케이션 등"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>미래에 대한 불안함이 있다면 이유는 무엇인가요?</label>
+          <textarea name="anxiety" rows="3" placeholder="취업, 진로 방향 등"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>불안함을 해결하기 위해 어떤 일을 해봤나요?</label>
+          <textarea name="effort" rows="3" placeholder="대외활동, 전공 심화, 상담 등"></textarea>
+        </div>
+
+        <button type="submit">기록하기</button>
+      </form>
+
+      <section class="stats-section">
+        <h3>적성 만족도 통계</h3>
+        <canvas id="fit-chart"></canvas>
+      </section>
+
+      <section class="records-section">
+        <h2>탐색 기록</h2>
+        <div id="records-container"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 진로 탐색 | 함께 성장하는 시간 🌿</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
