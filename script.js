@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", (https://script.google.com/macros/s/AKfycbxb6Ks15PEqo025_vry9uTVUbWsSppD9GEPRfdvieXr_se_qpkJc6jAU1VLCOOqH5gTFQ/exec) => {
   const form = document.getElementById("career-form");
   const recordsContainer = document.getElementById("records-container");
   const chartCanvas = document.getElementById("fit-chart");
