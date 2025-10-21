@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // ✅ 여기에 본인 Google Apps Script 웹앱 URL을 입력하세요
-  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyFPhr-k4yvJ5smYAfXjdyWZb9k61C8ElKrAzW-rbc2tiO1jZxOl4swJH87XvixvAawVw/exec";
+  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzIcX0e0mDbVVpdW1v4N7h1wvx2tzTzxRb29ctrklhdZuJ2MK5kQNvceQ0KVrT-3Skv7w/exec";
 
   const form = document.getElementById("career-form");
   const recordsContainer = document.getElementById("records-container");
