@@ -1,20 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-     const WEB_APP_URL = '    const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwh1nHv-utUNPuHUA30YXfziK4hV0ILnL63YN8qrgLwS2LvfJhrfAfotwUvhF1fZrO7yw/exec';
-
-    const recordForm = document.getElementById('record-form');
-    const recordsContainer = document.getElementById('records-container');
-    const dateInput = document.getElementById('date');
-    const exportButton = document.getElementById('export-excel');
-    const moodChartCanvas = document.getElementById('mood-chart');
-    const recordForm = document.getElementById('record-form');
-    const recordsContainer = document.getElementById('records-container');
-    const dateInput = document.getElementById('date');
-    const exportButton = document.getElementById('export-excel');
-    const moodChartCanvas = document.getElementById('mood-chart');
+  const form = document.getElementById("career-form");
+  const recordsContainer = document.getElementById("records-container");
+  const chartCanvas = document.getElementById("fit-chart");
   let records = [];
 
   // 📊 차트 초기화
-  let fitChart = new Chart(chartCanvas, {
+  const fitChart = new Chart(chartCanvas, {
     type: "bar",
     data: {
       labels: ["1점", "2점", "3점", "4점", "5점"],
