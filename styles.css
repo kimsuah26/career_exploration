@@ -46,9 +46,9 @@ header p {
 
 #career-form {
   background-color: var(--card-color);
-  padding: 30px;
   border-radius: 16px;
   box-shadow: 0 4px 15px var(--shadow-color);
+  padding: 30px;
   margin-bottom: 40px;
 }
 
@@ -63,30 +63,37 @@ header p {
   color: var(--primary-color);
 }
 
-input, select, textarea {
+input[type="text"],
+select,
+textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid var(--border-color);
   border-radius: 8px;
   font-size: 1rem;
   font-family: 'Noto Sans KR', sans-serif;
-  transition: all 0.2s ease;
+  transition: border-color 0.3s ease;
 }
 
-input:focus, textarea:focus, select:focus {
-  border-color: var(--accent-color);
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 2px rgba(244, 162, 97, 0.2);
+  border-color: var(--accent-color);
+}
+
+.mood-selector {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .mood-selector input[type="radio"] {
-  position: absolute;
-  opacity: 0;
+  display: none;
 }
 
 .mood-selector label {
-  display: inline-block;
-  background-color: #fdfdfd;
+  background-color: var(--card-color);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 8px 14px;
@@ -137,7 +144,7 @@ button[type="submit"]:hover {
   background-color: var(--card-color);
   border-radius: 16px;
   box-shadow: 0 4px 15px var(--shadow-color);
-  padding: 25px;
+  padding: 25px 30px;
 }
 
 .records-section h2 {
@@ -146,24 +153,39 @@ button[type="submit"]:hover {
   margin-bottom: 20px;
 }
 
+/* --- 바로 이 부분에 스크롤 기능이 추가되었습니다! --- */
+#records-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 500px; /* 기록 영역의 최대 높이를 500px로 제한 */
+  overflow-y: auto;  /* 내용이 넘칠 경우 세로 스크롤바 자동 생성 */
+  padding: 5px 15px 5px 5px; /* 스크롤바와 내용이 겹치지 않도록 안쪽 여백 추가 */
+}
+
 .record-card {
+  background-color: var(--background-color);
   border: 1px solid var(--border-color);
-  border-radius: 10px;
-  padding: 15px;
-  margin-bottom: 15px;
-  box-shadow: 0 2px 5px var(--shadow-color);
-  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.record-card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .record-card p {
-  margin: 6px 0;
+  margin-bottom: 8px;
 }
 
-footer {
-  text-align: center;
-  margin-top: 40px;
+.record-card p:last-child {
+  margin-bottom: 0;
+}
+
+.record-card .date {
+  font-size: 0.8em;
+  text-align: right;
   color: #777;
-  font-size: 0.9rem;
-  border-top: 1px solid var(--border-color);
-  padding-top: 20px;
+  margin-top: 10px;
 }
