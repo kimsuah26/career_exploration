@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyFPhr-k4yvJ5smYAfXjdyWZb9k61C8ElKrAzW-rbc2tiO1jZxOl4swJH87XvixvAawVw/exec";
   const form = document.getElementById("career-form");
   const recordsContainer = document.getElementById("records-container");
   const chartCanvas = document.getElementById("fit-chart");
